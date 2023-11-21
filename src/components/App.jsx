@@ -32,7 +32,7 @@ export default class App extends PureComponent {
     if (prevQuery !== nextQuery) {
       this.setState({loading: true });
 
-      fetch(`https://pixabay.com/api/?q=${nextQuery}&page=${this.state.page}&key=30188307-c49a871897b6d5bfff07bff1b&image_type=photo&orientation=horizontal&per_page=12`)
+      fetch(`https://pixabay.com/api/?q=${nextQuery}&page=${this.state.page}&key=40818387-04943edebb074dd6464bb45f5&image_type=photo&orientation=horizontal&per_page=12`)
         .then(response => {
           if (response.ok) {
             return response.json()
@@ -49,7 +49,7 @@ export default class App extends PureComponent {
   handleClick = () => {
     this.setState({ loading: true });
     
-    fetch(`https://pixabay.com/api/?q=${this.state.query}&page=${this.state.page}&key=30188307-c49a871897b6d5bfff07bff1b&image_type=photo&orientation=horizontal&per_page=12`)
+    fetch(`https://pixabay.com/api/?q=${this.state.query}&page=${this.state.page}&key=40818387-04943edebb074dd6464bb45f5&image_type=photo&orientation=horizontal&per_page=12`)
       .then(response => {
         if (response.ok) {
           return response.json()
