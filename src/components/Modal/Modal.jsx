@@ -28,12 +28,9 @@ export default class Modal extends Component {
 
   }
   render() {
-    return createPortal(
-      <div className={css.Overlay} onClick={this.handleBackdropClick}>
-        <div className={css.Modal} >
-          {this.props.children}
-        </div>
-       </div>, modalRoot);
+    return createPortal(<div className={css.Overlay} onClick={this.handleBackdropClick}>
+      <div className={css.Modal} >{this.props.children}</div>
+    </div>, modalRoot)
   }
 }
 

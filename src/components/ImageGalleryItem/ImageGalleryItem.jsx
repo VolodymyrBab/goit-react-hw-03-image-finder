@@ -11,7 +11,9 @@ export default class ImageGalleryItem extends Component {
 
   render() {
     const { image, tags, onClick, index } = this.props;
-    return <li onClick={onClick} className={css.ImageGalleryItem}><img onClick={() => {this.props.getIndex(index)}} src={image} alt={tags} className={css.image}  /> </li>
+    return <li onClick={onClick} className={css.ImageGalleryItem}>
+      <img onClick={() => {this.props.getIndex(index)}} src={image} alt={tags} className={css.image}  />
+       </li>
   }
 }
 
